@@ -33,7 +33,7 @@ public class height {
 	    int p1 = 0;
 	    int p2 = 0;
 	    for(int i = 0; i < numList.size(); i++)	{
-	    	System.out.println("asdf  " + numList.get(i));
+	    //	System.out.println("asdf  " + numList.get(i));
 	    	if(numList.get(i) != numMap.get(numList.get(i)))	{
 	    		//System.out.println("asdf  " + numList.get(i));
 	    		p1 = i;
@@ -42,7 +42,7 @@ public class height {
 	    }
 	    
 	    for(int j = numList.size() -1; j >=0; j--)	{
-	    	System.out.println("qqqqq  " + numList.get(j));
+	    	//System.out.println("qqqqq  " + numList.get(j));
 	    	if(numList.get(j) != numMap.get(numList.get(j)))	{
 	    		
 	    		p2 = j;
