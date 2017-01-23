@@ -1,3 +1,5 @@
+package CtCi;
+
 import java.io.*;
 import java.util.*;
 import java.text.*;
@@ -5,12 +7,23 @@ import java.math.*;
 import java.util.regex.*;
 
 public class DPCoinChange	{
-	HashMap<Integer, Integer> monMap = new HashMap<Integer, Integer>();
+	static HashMap<Integer, Long> monMap = new HashMap<Integer, Long>();
     public static long makeChange(int[] coins, int money)	{
-        if(money == 0)	{
-        	return 0;
+    	//for all the elements where u cant make a combination with
+    	if(money < coins[0])	{
+    		for(int i = 0; i < coins[0]; i++)	{
+    			if(!monMap.containsKey(i))	{
+    				monMap.put(i, (long) 0);
+    			}
+    		}
         }
-        
+    	if(money == coins[0])	{
+    		if(!monMap.containsKey(coins[0]))	{
+    			monMap.put(coins[0], (long) 1);
+    		}
+    	}
+    	
+        return 0;
     }
     
     public static void main(String[] args) {
